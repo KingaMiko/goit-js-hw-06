@@ -17,12 +17,11 @@ const lengthValue = validationInput.getAttribute("data-length");
 validationInput.addEventListener("blur", () => {
   if (validationInput.value.trim().length === 0) {
     validationInput.classList.remove("valid", "invalid");
-    validationInput.classList.add("gray");
   } else if (validationInput.value.trim().length === parseInt(lengthValue)) {
-    validationInput.classList.remove("invalid", "gray");
+    validationInput.classList.remove("invalid");
     validationInput.classList.add("valid");
   } else {
-    validationInput.classList.remove("valid", "gray");
+    validationInput.classList.remove("valid");
     validationInput.classList.add("invalid");
   }
 });
