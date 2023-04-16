@@ -1,1 +1,1 @@
-# goit-js-hw-06
+https://kingamiko.github.io/goit-js-hw-06/
