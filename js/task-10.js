@@ -5,6 +5,7 @@ const input = document.querySelector("input");
 const createBtn = document.querySelector("[data-create]");
 const destroyBtn = document.querySelector("[data-destroy]");
 const boxes = document.querySelector("#boxes");
+const comment = document.querySelector("#comment");
 
 function createBoxes(amount) {
   const startSize = 30;
@@ -21,14 +22,17 @@ function createBoxes(amount) {
     box.style.margin = "15px";
     box.style.backgroundColor = getRandomHexColor();
     fragment.appendChild(box);
+   
   }
 
   boxes.appendChild(fragment);
+  comment.textContent = `Number of boxes: ${amount}`;
 }
 
 function destroyBoxes() {
   boxes.innerHTML = "";
   input.value = "";
+  comment.textContent = "";
 }
 
 function getRandomHexColor() {
